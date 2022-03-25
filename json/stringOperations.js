@@ -4,9 +4,9 @@ export function jsonFormattedToLine(input){
 
 export function jsonLineToFormatted(input){
   try {
-        let output = JSON.parse(input);
+    return JSON.stringify(JSON.parse(input), null, "\t")
     } catch(e) {
         alert(e);
     }
-  return JSON.stringify(output, null, "\t")
+  
 }
