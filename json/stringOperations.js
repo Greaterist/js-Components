@@ -4,9 +4,10 @@ export function jsonFormattedToLine(input){
 
 export function jsonLineToFormatted(input){
   try {
-    return JSON.stringify(JSON.parse(input), null, "\t")
+    JSON.parse(input);
     } catch(e) {
         alert(e);
+      return null;
     }
-  
+  return JSON.stringify(JSON.parse(input), null, "\t");
 }
